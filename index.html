@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Live code editor</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body onload='ready()'>
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="#">Live code editor</div>
+                <ul class="menu">
+                    <li><a href="#home" class="menu-btn">Home</a></li>
+                    <li><a href="#" class="menu-btn">About</a></li>
+                    <li><a href="contact.html" class="menu-btn">Contact</a></li>
+                    <li><a href="#howtouse" class="menu-btn">How to use</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        <div id='container'>
+            <div id='editors'>
+                <div class = 'fa fa-html5 htmlLabel' style="font-size:23px;color:red" id = 'labels'>
+                    <button type="button" class="button minButton" onclick="minimize()">Minimize</i></button>
+                    <span id='text'>HTML</span>
+                </div>
+                <div class = 'fa fa-css3 cssLabel' style="font-size:23px;color:blue" id='labels'>
+                    <span id='text'>CSS</span>
+                </div>
+                <div class = 'fa fa-jsfiddle jsLabel' style="font-size:23px;color:green" id='labels'>
+                    <button type="button" class="button downloadCode" id="dwn-btn">Download</i></button>
+                    <span id='text'>Javascript</span>
+                    
+                    <button type="button" class="button maxButton" onclick="maximize()">Maximize</i></button>
+                </div>
+                <div class='editor' id='htmlEditor'></div>
+                <div class='editor' id='cssEditor'></div>
+                <div class='editor' id='jsEditor'></div>
+            </div>    
+            <iframe id='iframe' frameBorder="0">
+            </iframe>
+                        
+        </div>
+        <hr />
+        <br>
+        <h2 style="text-align:center">How to use</h2>
+        <p style = "color: red;text-align: center;font-size:30px;">this is a simple live code editor which can compile html css js<br>you can see the below images for more info</p>
+        <div class="howtouse" id ="#howtouse">
+            
+            <div class="slide fade">
+              <img src='images/1.png' alt=''>
+            </div>
+            <div class="slide fade">
+              <img src='images/2.png' alt=''>
+            </div>
+            <div class="slide fade">
+              <img src='images/3.png' alt=''>
+            </div>
+     
+            <a href="#" class="prev" title="Previous">&#10094</a>
+            <a href="#" class="next" title="Next">&#10095</a>
+          </div>
+          <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            
+          </div>
+        <footer>
+            <span>Major Project By Hemanth Chandragiri</a> <i class="fa fa-copyright" aria-hidden="true"></i> 2021 All rights reserved.</span><br>
+            <span>Best viewed in 1920 x 1080 in chrome and supports android devices too</span>
+        </footer>
+        <script type="text/javascript" src="script.js"></script>
+
+        <script>
+            $(function() {
+            $( "#htmlEditor").resizable();
+            });
+        </script>
+
+    </body>
+
+
+
+</html>
+
+
